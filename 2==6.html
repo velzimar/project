@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Exercice </title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+   
+<style>
+#nav {
+    height:86%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Exercice 6</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+				<li>
+                    <a href="2==1.html">Exercice 1</a>
+                </li>
+				<li>
+                    <a href="2==2.html">Exercice 2</a>
+                </li>
+				<li>
+                    <a href="2==3.html">Exercice 3</a>
+                </li>
+				<li>
+                    <a href="2==4.html">Exercice 4</a>
+                </li>
+				<li>
+                    <a href="2==5.html">Exercice 5</a>
+                </li>
+                <li>
+                    <a href="2==6.html">Exercice 6</a>
+                </li>
+                <li>
+                    <a href="2==7.html">Exercice 7</a>
+                </li>
+                <li>
+                    <a href="exercicepascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<p>Ecrire Un programme qui permet de :
+<p>- Determiner tous les nombres de Mersenne compris dans l'intervalle [A..B] avec A et B, 2 entiers saisis tels que ( 2 < A < B < 50000 ).</p>
+<p>- Stocker chaque nombre M de Mersenne trouvé, dans un ligne d'un fichier texte intitulé "mersenne.txt" sous la forme M = (2^N) - 1.(avec un procédé recursive)</p>
+<p>- Afficher le contenu du fichier "mersenne.txt". Si ce fichier est vide le programme affichera "Il n'y a aucun nombre de Mersenne".</p>
+<p>Exemple: M = 31, M nombre de Mersenne car il peut s'écrire sous la forme (2^N) - 1 avec N = 5 est un nombre premier ( (2^5) - 1 = 31 ).</p>
+<p><a href="http://paste.is/11601/14486498/"> Cliquer ici pour voir la solution </a>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

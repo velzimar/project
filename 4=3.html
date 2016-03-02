@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Triangle de Pascal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:100%;
+}
+#section p{
+    font-size:19px;
+	font-family: monospace;
+	margin-top:0px
+}
+h3{
+	color : red;
+	font-weight : bold;
+}
+#section pre{
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.09);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Triangle de Pascal</marquee></h2>
+</div>
+
+ <!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="4=1.html">Calcul de somme</a>
+                </li>
+                <li>
+                    <a href="4=2.html">Calcul sur les suites</a>
+                </li>
+                <li>
+                    <a href="4=4.html">Triangle de Pascal</a>
+                </li>
+                <li>
+                    <a href="courspascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<p>Un algorithme, en langage formel, de construction du triangle de Pascal peut se présenter comme suit, en utilisant la relation de récurrence entre coefficients binomiaux:</p>
+<h3><p>Algorithme:</p></h3>
+<pre>
+0)Def Proc Remplir_Triangle(var m:mat ; var n:entier)
+1)Repeter
+	n = Donnée
+  Jusqu'à n dans [3..49]	
+2)m[1,1] := 1
+  Pour i de 2 à n faire
+	m[i,1] := 1
+	m[i,i] := 1
+	Pour j de 2 à i-1 faire
+		m[i,j] := m[i-1,j] + m[i-1,j-1]
+	Fin pour	
+  Fin pour
+3)Fin Proc Remplir_Triangle.  
+</pre>
+<pre>
+
+                                                                    1
+                                                                   1 1
+                                                                  1 2 1 
+                                                                 1 3 3 1 
+                                                                1 4 6 4 1 
+                                                              1 5 10 10 5 1 
+                                                            1 6 15 20 15 6 1 
+                                                           1 7 21 35 35 21 7 1 
+                                                         1 8 28 56 70 56 28 8 1 
+                                                       1 9 36 84 126 126 84 36 9 1 
+                                                   1 10 45 120 210 252 210 120 45 10 1 
+                                                 1 11 55 165 330 462 462 330 165 55 11 1 
+                                               1 12 66 220 495 792 924 792 495 220 66 12 1 
+                                           1 13 78 286 715 1287 1716 1716 1287 715 286 78 13 1 
+                                       1 14 91 364 1001 2002 3003 3432 3003 2002 1001 364 91 14 1 
+                                    1 15 105 455 1365 3003 5005 6435 6435 5005 3003 1365 455 105 15 1 
+                                1 16 120 560 1820 4368 8008 11440 12870 11440 8008 4368 1820 560 120 16 1 
+                            1 17 136 680 2380 6188 12376 19448 24310 24310 19448 12376 6188 2380 680 136 17 1 
+                         1 18 153 816 3060 8568 18564 31824 43758 48620 43758 31824 18564 8568 3060 816 153 18 1 
+                     1 19 171 969 3876 11628 27132 50388 75582 92378 92378 75582 50388 27132 11628 3876 969 171 19 1 
+              1 20 190 1140 4845 15504 38760 77520 125970 167960 184756 167960 125970 77520 38760 15504 4845 1140 190 20 1 
+</pre>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

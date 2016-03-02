@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Tri d'un tableau</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:540%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Tri d'un tableau</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="4-1.html">Recherche d'un élément dans un tableau</a>
+                </li>
+                <li>
+                    <a href="4-2.html">Tri d'un tableau</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<pre>
+<font style="color:lightblue"><p align="center"><b>TRI à bulle </b></p></font><br>
+<br>
+<font style="color:red">Definition :</font>
+<p>Le principe du tri bulle (bubble sort) est de comparer deux à deux les éléments e1 et e2 consécutifs d'un 
+tableau et d'effecteur une permutation si e1 > e2. On continue de trier jusqu'à ce qu'il n'y ait plus de permutation.</p>
+<br>
+<font style="color:red">Traduction en Pascal :</font>
+<p>program tri_tab;
+uses wincrt; 
+type 
+     tab= array [1..25] of integer; 
+var 
+    t:tab; 
+    n:integer; 
+ 
+procedure saisie(var n:integer; var t:tab); 
+var 
+    i:integer; 
+begin 
+ repeat 
+  writeln('donnner le nbre d''element du tableau'); 
+  read(n); 
+ until n in [5..25];
+ 
+ For i:=1 to n do 
+  begin 
+   writeln('donner l''element ',i); 
+   read(t[i]); 
+  end; 
+end; 
+ 
+procedure tri(n:integer; var t:tab); 
+var 
+    verif:boolean; 
+    i,x:integer; 
+begin 
+ repeat 
+  verif:=true; 
+   for i := 1 to n-1 do 
+    begin 
+     if t[i]>t[i+1] then 
+      begin 
+       x:=t[i]; 
+       t[i]:=t[i+1]; 
+       t[i+1]:=x; 
+       verif:=false; 
+      end; 
+    end; 
+ until verif=true; 
+end; 
+ 
+procedure affiche(n:integer; t:tab); 
+var 
+    i:integer; 
+begin 
+ write('| '); 
+  for i:=1 to n do 
+   begin 
+    write(t[i],' | '); 
+   end; 
+end; 
+ 
+BEGIN 
+ saisie(n,t); 
+ tri(n,t); 
+ affiche(n,t); 
+END.
+</p>
+<br>
+<font style="color:lightblue"><p align="center"><b>TRI par insertion </b></p></font><br>
+<br>
+<font style="color:red">Definition :</font>
+<p>Le principe du tri par insertion est d'insérer à la n-ième itération le n-ième élément à la bonne place.</p>
+<br>
+<font style="color:red">Traduction en Pascal :</font>
+<p>Program triinsertion ; 
+uses wincrt ; 
+type 
+    tab=array[1..20] of integer ; 
+var 
+ n,x,i : integer ; t: tab ; 
+ 
+procedure saisie (var n : integer ;var t:tab); 
+var 
+i : integer ; 
+Begin 
+ repeat 
+  writeln('saisir la taille du tableau :'); 
+  readln(n); 
+ until n in [5..20]   ;  
+  For i:= 1 to n do 
+   begin 
+    repeat 
+     writeln('Saisir l''element ',i); 
+     readln(t[i]); 
+    until t[i] > 0 ; 
+   end; 
+End; 
+ 
+function position (t:tab ; i : integer ): integer ; 
+var 
+   j : integer ; 
+Begin 
+ j:=0 ; 
+  repeat 
+   j:=j+1 ; 
+  until t[j] >= t[i] ; 
+ position:=j ; 
+End; 
+ 
+procedure tri(var t : tab ; n:integer ); 
+var 
+int,i,j,p : integer ; 
+Begin 
+ for i:=2 to n do 
+  begin 
+   p:=position(t,i); 
+    if p <> i then 
+     begin 
+      int:=t[i] ; 
+       for j :=i-1 downto p do 
+        begin 
+         t[j+1]:=t[j] ; 
+        end; 
+      t[p]:=int ; 
+     end; 
+  end;  
+End; 
+ 
+procedure affiche (var t :tab ; n : integer ); 
+var 
+   i:integer ; 
+begin 
+ for i:= 1 to n-1 do 
+  begin 
+   write(t[i]); 
+   write('|'); 
+  end; 
+   write(t[n]); 
+end; 
+ 
+begin 
+ saisie(n,t); 
+ x:=position(t,i); 
+ tri(t,n); 
+ affiche(t,n); 
+end.
+
+</p>
+<br>
+<font style="color:lightblue"><p align="center"><b>TRI par sélection</b></p></font><br>
+<br>
+<font style="color:red">Definition :</font>
+<p>Le principe du tri par sélection consiste à : 
+1-	déterminer le plus petit élément de l'élément (ou le plus grand) 
+2-	le placer à sa position finale (c'est-à-dire en dernière ou en première position du tableau) 
+3-	rechercher le second plus grand élément (ou le second plus petit élément) 
+4-	le placer à sa position finale (c'est-à-dire en avant-dernière ou en seconde position) 
+5-	répéter ce traitement jusqu’à ce que le tableau soit trié.
+</p>
+<br>
+<font style="color:red">Traduction en Pascal :</font>
+<p>Program triselection ;
+uses wincrt ;
+type
+   tab=array [1..20] of integer ;    
+var
+   n,x,p : integer ; t : tab ;
+ 
+procedure saisie (var n : integer ; var t :tab );   
+var
+   i : integer ;   
+begin 
+ repeat
+  writeln('Saisir la taille du tableau :');
+  readln(n);
+ until n in [5..20] ;
+  For i:= 1 to n do                     
+   begin
+    repeat
+     writeln('Saisir l''élément',i) ;
+     readln(t[i]) ;
+    until (t[i] > 0)   
+   end;  
+end;
+ 
+function pos_max(n : integer ;t :tab; p :integer):integer ; 
+var
+   max,i : integer ;
+Begin
+     max:=p ;
+ for i:= p to n do
+  begin
+   if t[i]>t[max] then
+    max:=i ;
+  end;
+   pos_max:=max ; 
+End;
+ 
+procedure trie (n : integer ; var t :tab )   ;
+var
+   i,max,p : integer ;   
+Begin  
+ for i:= 1 to n-1 do
+  begin   
+   p:=pos_max(n,t,i);
+   x:=t[i];
+   t[i]:=t[p];
+   t[p]:=x ;
+  end;
+End;  
+ 
+procedure affiche (n : integer ; t :tab) ;
+var
+   i : integer ; 
+Begin
+ for i:= 1 to n-1 do
+  begin
+   write(t[i]);
+   write('|');
+  end;
+   write(t[n]); 
+End;
+ 
+Begin       
+ saisie(n,t); 
+ trie(n,t);
+ affiche(n,t);
+End.
+
+</p>
+<br>
+</pre>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

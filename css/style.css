@@ -1,0 +1,205 @@
+/*<script src='Time.js'></script>
+*/
+body{
+	margin: 0 !important;
+	padding: 0 !important;
+	background: url(websitebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#header {
+	/*background-image:url("header.png");
+	background-repeat: no-repeat;
+	background-position: top ;
+    text-align:center;
+	font-family:"Lucida Console",monospace;
+	color:lightblue;
+	font-size:100%;
+	text-shadow: 1px 1px 20px rgba(150, 201, 123, 1);*/
+}
+#section pre{
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.09);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+}
+
+
+.top{
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1030;
+    height:6%;
+    background-color:#567;
+
+
+    text-align:center;
+	font-family:"Lucida Console",monospace;
+	color:lightblue;
+	font-size:1.5vmax;
+	text-shadow: 1px 1px 20px rgba(150, 201, 123, 1);
+}
+
+#nav {
+	font-size:1em;
+	font-family: cursive;
+    line-height:51px;
+    height:86%;
+    width:205px;
+    float:left;
+	padding:10px;
+	text-align:center;
+}
+ul {
+	list-style:none;
+}
+#menu a {
+	top:0.8em;
+	position:relative;
+	text-align: center;
+    text-decoration: none;
+    color: white;
+	font-variant:small-caps;
+	font-size:1.3em;
+    border-radius: 0 4px 4px 0;
+	border: 2px solid #6495ED;
+    padding: 3px 2px; 
+	margin:-8px;
+	box-shadow: 2px 2px 20px rgba(118,132,201,1);
+}
+#menu a:hover {
+    background-color: orange;
+}
+#menu a:active {
+    background-color: lightblue;
+}
+
+#section{
+	padding-left:17%;
+	padding-top:4%;
+}
+
+
+#section font{
+	margin:  10px ;
+    padding: 10px;
+	float: left;
+	width: 86%; 
+}
+#section p,pre {
+	float: left;
+	width: 86%;
+}
+
+#section img{
+	margin:10px;
+	width: 280px;
+	weight: 280px;
+	box-shadow : rgba(1,1,1,2.3) 2px 5px 20px ;
+	background-image:url("websiteBackground.jpg");
+	background-repeat: repeat;
+	background-position: top ;
+}
+
+.top h1{
+    font-size:5vmin;
+    line-height: 50%;
+}
+
+
+
+@media screen and (max-width:1700px) {
+    #section p {
+     padding-left:10%;
+	 
+}  
+a{    font-size: 0.9vmax;}
+}
+
+@media screen and (max-width:1440px) {
+    #section p {
+     padding-left:15%;
+	
+}  
+}
+
+@media screen and (max-width:960px) {
+    #nav {
+        width:10%; 
+		height:100%;		
+    }
+	#menu a {
+	    padding: 6px 10px; 
+	}	
+}
+
+@media screen and (max-width:640px) {
+    #nav {
+        width:10%;    
+		height:100%;		
+    }
+	#menu a {
+	    padding: 5px 8px; 
+	}	
+}
+
+@media screen and (max-width:480px) {
+    #nav {
+        width:10%;
+		height:100%;
+    }
+	#menu a {
+	    padding: 2px 5px; 
+		font-size:80%;
+	}
+	#section  img{
+	    width:40%;
+	}
+	#footer {
+        font-size:50%;	 	 
+}
+}
+
+@media screen and (max-width:320px) {
+    #nav {
+        width:10%;
+		height:100%;
+    }
+	#menu a {
+	    padding: 2% 5%;  
+		font-size:80%;
+	}
+	#section  img{
+	    width:20%;
+	}
+	#footer {
+        font-size:50%;	 	 
+}
+}
+
+@media screen and (max-height: 640px) {
+.top h1{
+    line-height: 10%;
+}
+}
+@media screen and (max-height: 480px) {
+.top h1{
+    line-height: 1%;
+}
+}

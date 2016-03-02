@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Fonction</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:150%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Les fonctions</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="3-1.html">Fonction</a>
+                </li>
+                <li>
+                    <a href="3-2.html">Procedure</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+
+<div id="section">
+<font size=5>Une fonction est un sous-programme qui retourne un seul résultat de type simple (entiers, réels, booléen, caractère, chaîne). </font>
+<br>
+<font style="color:darkblue" size=7>Appel  :</font>
+<br>
+<font style="color:red">En Pascal :</font>
+<p>nom_de_fonction (PE1,PE2, .. PEn)</p>
+<font style="color:red">Analyse/Algo : :</font>
+<p>FN Nom_de_fonction (PE1,PE2, .. PEn) </p>
+
+<font style="color:darkblue" size=7>Déclaration  :</font>
+<br>
+<font style="color:red">En Pascal<sup>(PF : paramètre formel) :</sup></font>
+<p>FUNCTION Nom_de_fonction (PF1:Type1 ; PF2:Type2 ; .. PFn:Type n): Type de la fct
+<p>VAR 
+<p>   declaration des variables locales;
+<p>Begin
+<p>   Instructions d'évaluations du résultat R
+<p>Nom_de_fct := R;
+<p>End;</p>
+<p><font style="color:red">Analyse :</font>
+<p>DEF FN Nom_fct (PEn:Type n): Type
+<p>Résultat = Nom_fct
+<p>Nom_fct < -- R
+<p>R= définition de R
+<p>Fin Nom_fct</p>
+<font style="color:red">Algorithme :</font>
+<p>0) DEF FN Nom_fct (PFn:Type n): type
+<p>1) Instructions d’évaluation de R
+<p>2) Nom_fct < -- R
+<p>3) Fin Nom_fct</p>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

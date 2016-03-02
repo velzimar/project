@@ -1,0 +1,111 @@
+<!DOCTYPE html><html>
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>BAC Info | JS Cours</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script src="js/soluex.js"></script>
+  
+  
+<style>
+body {
+  background-color: #eee;
+}
+.navbar-default {
+  background-color: #f0db4f;
+  border-color: #e2cd3e;
+  }
+</style>
+</head>
+
+<body>
+<!--Begin nav -->
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.Php">Acceuil</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="js.html">Intro</a></li>
+        <li><a href="jscours.html">Cours JavaScript</a></li>
+						<li class="active dropdown">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Exercies JavaScript
+						  <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#Ex1">Exercice 1</a></li>
+							<li><a href="#Ex2">Exercice 2</a></li>
+							<li><a href="#Ex3">Exercice 3</a></li> 
+						  </ul>
+						</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End nav -->
+
+	<div class="container">
+		<div class="well">
+
+        <!--Begin template-->
+<center><h2> <a name="EX1">Exercice 1: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">Ecrire une fonction JavaScript qui reverse une chaîne ou un nombre donnée. <!--Question-->
+<sub>Exemple: x=32548 ==> Sortie=84523</sub></h3> <!--Exemple-->
+<h4 id="solu1b"><a onclick="solu1()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+        <!--Begin template-->
+<center><h2> <a name="EX2">Exercice 2: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">Ecrire une fonction JavaScript qui vérifie si une chaîne ou un nombre donnée est palindrome ou pas. <!--Question-->
+<sub>Un palindrome est une séquence qui lit le même arrière que vers l'avant, Exemple: RADAR , 12321</sub></h3> <!--Exemple-->
+<h4 id="solu2b"><a onclick="solu2()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+        <!--Begin template-->
+<center><h2> <a name="EX3">Exercice 3: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">Ecrire une fonction JavaScript qui compte le nombre des voyelles dans une chaîne donnée.<!--Question-->
+<sub>Les voyelles sont: A, E, I, O, U, Y,  Exemple: ch=Baccalaureat ==> Sortie=6</sub></h3> <!--Exemple-->
+<h4 id="solu3b"><a onclick="solu3()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+        <!--Begin template-->
+<center><h2> <a name="EX4">Exercice 4: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">Ecrire une fonction JavaScript pour afficher le jour et l'heure actuelle dans le format suivant.<!--Question-->
+<sub>Sortie= Aujourd'hui est: Sunday.   heure actuelle est: 5 PM: 30: 11 </sub></h3> <!--Exemple-->
+<h4 id="solu4b"><a onclick="solu4()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+        <!--Begin template-->
+<center><h2> <a name="EX5">Exercice 5: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">Ecrire une fonction JavaScript pour obtenir le nombre d'occurrences de chaque lettre dans la chaîne donnée.<!--Question-->
+<sub>Exemple: ch=Baccalaureat ==> Sortie= a=4 b=1 c=2 e=1 l=1 r=1 t=1 u=1</sub></h3> <!--Exemple-->
+<h4 id="solu5b"><a onclick="solu5()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+        <!--Begin template-->
+<center><h2> <a name="EX6">Exercice 6: 'Facile'</a></h2></center> <!--Title + Level-->
+<pre><h3 style="color:purple">pour construire le modèle suivant d'un entier x.<!--Question-->
+<sub>Exemple: x=6 ==> Sortie= ( lignes, nombre d'étoile est le numero du ligne)
+*
+**
+***
+****
+*****
+******</sub></h3> <!--Exemple-->
+<h4 id="solu6b"><a onclick="solu6()" >Voir Solution</a></h4>  <!--Solution-->
+</pre>
+        <!--End template-->
+
+		</div>
+	</div>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+
+</html>

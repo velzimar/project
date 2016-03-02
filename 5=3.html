@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | La conversion entre bases de numeration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:86%;
+}
+#section pre,p{
+    font-size:19px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>La conversion entre bases de numeration</marquee></h2>
+</div>
+
+ <!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="5=1.html">Calcul du factorielle</a>
+                </li>
+                <li>
+                    <a href="5=2.html">Calcul du PGCD et du PPCM</a>
+                </li>
+                <li>
+                    <a href="5=3.html">La conversion entre bases de numeration</a>
+                </li>
+                <li>
+                    <a href="5=4.html">La décomposition en facteurs premiers et les nombres premier</a>
+                </li>
+                <li>
+                    <a href="5=5.html">Les nombres premiers</a>
+                </li>
+                <li>
+                    <a href="5=6.html">Calcul de A<sup>p</sup><sub>n</sub> et C<sup>p</sup><sub>n</sub></a>
+                </li>	
+                <li>
+                    <a href="5=7.html">Règles de divisibilité</a>
+                </li>					
+                <li>
+                    <a href="courspascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<font style="color:red"><h2>Définition:</h2></font>
+	<p>
+Convertir un entier positif N dans une base b au moins égale à 2 consiste à chercher la représentation de N dans la base b.
+	</p>
+<font style="color:red"><h2>Conversion base 10 en base 2:</h2></font>
+	<pre>
+0) Def Fn C_10_2_Iterative ( n:entier ) : chaine 
+1) Repeter
+		R := n mod 2
+		convch(R,ch)
+		Bin := ch + Bin
+		n := n div 2
+   Jusqu'à ( n = 0 )
+2) C_10_2_Iterative := Bin
+3) Fin C_10_2_Iterative   
+	</pre>
+	<pre>
+0) Def Fn C_10_2_Recursive ( n:entier ) : chaine 
+1) Si ( n = 0 ) alors
+		C_10_2_Recursive := ""
+	Sinon
+		R := n mod 2
+		convch(R,ch)
+		C_10_2_Recursive := C_10_2_Recursive( n  div 2 ) + ch
+	Fin si	
+3) Fin C_10_2_Recursive   
+	</pre>
+<font style="color:red"><h2>Conversion base 10 en base 16:</h2></font>
+	<pre>
+0) Def Fn C_10_16_Iterative ( n:entier ) : chaine
+1) [Hex := ""]
+	Repeter 
+		R := n mod 16
+		Si (R >= 10) alors
+			ch := chr(R+55)
+		Sinon
+			convch(R,ch)
+		Fin si
+		Hex := ch + Hex
+		n := n div 16
+	Jusqu'à ( n = 0 )
+2) C_10_16_Iterative := Hex	
+3) Fin C_10_16_Iterative
+	</pre>
+<font style="color:red"><h2>Conversion base 8 en base 10:</h2></font>
+	<pre>
+0) Def Fn C_8_10_Iterative ( Oct:chaine ) : entier	
+1)[p := 1 , x := 0] 
+	Pour i de 1 à long(ch) faire
+		valeur(oct[i],a,e)
+		x := x + a * p
+		p := p * 16
+	Fin pour
+2) C_8_10_Iterative := x
+3) Fin C_8_10_Iterative	
+	</pre>	
+<font style="color:red"><h2>Conversion base 16 en base 10:</h2></font>
+	<pre>
+0) Def Fn C_16_10_Iterative ( Hex:chaine ) : entier	
+1)[p := 1 , x := 0] 
+	Pour i do 1 à long(Hex) faire
+		Si (Hex[i] dans ['A'..'F']) alors
+			x := ord(Hex[i])-55
+		Sinon 
+			valeur(Hex[i],a,e)
+		Fin si
+		x := x + a * p
+		p := p * 16
+	Fin pour
+2) C_16_10_Iterative := x
+3) Fin C_16_10_Iterative	
+	</pre>		
+<font style="color:red"><h2>Conversion base 16 en base 2:</h2></font>
+	<pre>
+0) Def Fn C_16_2_Iterative ( Hex:chaine ) : entier	
+1)[Bin := ""] 
+	Pour i de 1 à long(Hex) faire
+		Si (Hex[i] dans ["A".."F"]) alors
+			a := ord(Hex[i]) - 55
+		Sinon
+			Valeur(Hex[i],a,er)
+		Fin si
+		ch := C_10_2(a)
+		Tant que (long(ch) < a) faire
+			ch := "0" + ch
+		Fin tant que
+		Bin := Bin + ch
+	Fin pour	
+	Tant que ( Bin[1] = "0" ) faire
+		effacer(bin,1,1)
+	Fin tant que
+2) C_16_2_Iterative := Bin
+3) Fin C_16_2_Iterative	
+	</pre>
+<font style="color:red"><h2>Conversion base 2 en base 16:</h2></font>
+	<pre>
+0) Def Fn C_2_16_Iterative ( Hex:chaine ) : entier	
+1)	Tant que (long(bin) mod 4 <> 0 ) faire
+		Bin := '0' + bin
+	Fin tant que		
+	Repeter
+		ch := sous-chaine(bin,1,4)
+		effacer(bin,1,4)
+		a := C_10_2(ch)
+		Si (a < 10) alors 
+			convch(a,c)
+		Sinon 
+			c := chr( a + 55 )
+		Fin si
+		Hex := Hex + c
+	Jusqu'à (bin = "")
+2) C_2_16_Iterative := Hex
+3) Fin C_2_16_Iterative	
+	</pre>	
+</div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

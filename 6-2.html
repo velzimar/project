@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Calcul du PGCD et du PPCM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:86%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+#section pre{
+	font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Calcul du PGCD et du PPCM</marquee></h2>
+</div>
+
+ <!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="6-1.html">Calcul du factorielle</a>
+                </li>
+                <li>
+                    <a href="6-2.html">Calcul du PGCD et du PPCM</a>
+                </li>
+                <li>
+                    <a href="6-3.html">La conversion entre bases de numeration</a>
+                </li>
+                <li>
+                    <a href="6-4.html">La décomposition en facteurs premiers</a>
+                </li>
+                <li>
+                    <a href="6-5.html">Les nombres premiers</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+
+<font style="color:red"><h2>PGCD</h2></font>
+<p>Le plus grand commun diviseur de deux entiers a et b appelé aussi PGCD est le plus grand entier permettant de diviser a et b. On le note PGCD (a,b).
+</p>
+<br><pre>
+Function PGCD_DEUCLIDE_ITERATIVE (A,B:integer):integer;
+var 
+	r : integer ;
+begin
+	while ( (a mod b) <> 0 ) do
+		begin
+			r := a mod b ;
+			a := b ;
+			b := r ;
+		end;
+	PGCD_EUCLIDE_ITERATIVE := b ;
+end;
+<hr>
+Function  PGCD_DIFFERENCE_ITERATIVE (A,B:integer):integer;
+var 
+	r : integer;
+begin
+	while (b <> a) do
+		if (a > b)then
+			a := a - b 
+		else
+			b := b - a ;
+	PGCD_DIFFERENCE_ITERATIVE := a ;
+end;
+</pre>
+<font style="color:red"><h2>PPCM</h2></font>
+<p>Le plus petit commun multiple de deux entiers a et b appelé aussi PPCM est le plus petit entier multiple à la fois de a et de b. On le note PPCM (a,b).
+</p>
+<br><pre>
+Function PPCM_ITERATIVE ( a,b : integer): integer ;
+var 
+	max,min : integer ;
+begin
+	if a > b then 
+		begin
+			max := a ;
+			min := b ;
+		end
+	else
+		begin 
+			max := b ; 
+			min := a ;
+		end;
+	while ( max mod min <> 0 ) do 
+		begin
+			max := max + ( a + b - min );
+		end ;
+	PPCM_ITERATIVE := max ;
+end ;
+</pre>
+</div>
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

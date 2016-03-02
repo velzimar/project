@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Exercice 6</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+ 
+<style>
+#nav {
+    height:86%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Exercice 6</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="3==1.html">Exercice 1</a>
+                </li>
+                <li>
+                    <a href="3==2.html">Exercice 2</a>
+                </li>
+				<li>
+                    <a href="3==3.html">Exercice 3</a>
+                </li>
+				<li>
+                    <a href="3==4.html">Exercice 4</a>
+                </li>
+				<li>
+                    <a href="3==5.html">Exercice 5</a>
+                </li>
+				<li>
+                    <a href="3==6.html">Exercice 6</a>
+                </li>
+				<li>
+                    <a href="3==7.html">Exercice 7</a>
+                </li>
+                <li>
+                    <a href="exercicepascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<p>Soit M une matrice carrée d taille (n*n) avec n dans [3..9], contenant ds entiers au hasard strictement positifs inférieurs à 1000.</p>
+<p>Soit la suite U définie par :</p>
+	<p>- U<sub>0</sub>=0 </p>
+	<p>- U<sub>n</sub>=3U<sub>n-1</sub>-1</p>
+<p>On veut écrire un programme qui permet de :</p>
+<p>- Remplir la matrice M.</p>
+<p>- Trier dans l'ordre croissant les éléments de chaque ligne de la matrice.</p>	
+<p>- Cherche et afficher tous les numéros de lignes de M qui contiennent au moins 2 éléments adjacents qui représentent 
+deux termes successifs de la suite U.</p>
+<p><a href="http://paste.is/13353/01649914/"> Cliquer ici pour voir la solution </a>
+</div>
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

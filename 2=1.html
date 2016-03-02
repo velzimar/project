@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | La récursivité</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:500%;
+}
+
+#section p{
+    font-size:20px;
+	font-family: monospace;
+}
+
+#left {
+	float:left;
+}
+u {
+	color:#B7DF3C
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle">La récursivité</h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="2=1.html">La récursivité</a>
+                </li>
+                <li>
+                    <a href="courspascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+
+
+<div id="section">
+<p><font style="color:red" size=6><b>Présentation :</b></font>
+<p>On est souvent incité à appeler une fonction à partir d’elle-même.</p>
+<p>Cette façon récurrente de faire permet non seulement de définir des fonctions mais aussi des ensembles et des suites.</p>
+<p>Pour définir une fonction sur l’ensemble des entiers positifs on procède de la manière suivante:</p>
+<p>1/ On précise la valeur de la fonction en zéro (ou en 1)</p>
+<p>2/ On donne la règle pour trouver la valeur de la fonction à partir de sa ou de ses valeurs précédentes. Cette façon récurrente de faire appelée récursivité est 
+une conséquence de l’induction mathématique (preuve par induction).</p>
+<p>Les exemples ci-dessous clarifient ce concept.</p>
+<p><font style="color:red" Size=6><b>CALCUL RÉCURSIF D'UN FACTORIEL :</b></font>
+<pre>
+<p>Function Fact(n : integer) : longint ; </p>
+<p> Begin </p>
+<p>	 If ( n = 0 ) then</p>
+<p>		Fact := 0</p>
+<p>	 Else</p>
+<p>		Fact := n * fact(n-1);</p>
+<p> End; </p>
+</pre>
+<p><font style="color:red" Size=6><b>CALCULER LA FONCTION PUISSANCE :</b></font>
+<pre>
+<p>Function Puiss( x : Real ; n : integer ) : integer ;</p>
+<p> Begin</p>
+<p>  If ( n = 0 ) then</p>
+<p>   Puiss := 1 </p>
+<p>  Else</p>
+<p>  If ( n > 0 ) then</p>
+<p>   Puiss := x * Puiss(x,n-1) ;</p>
+<p>  Else</p>
+<p>   Puiss := Puiss(1/x,-n) ;</p>
+<p> End;</p>
+</pre>
+<p><font style="color:red" Size=6><b>Verifier Si une chaine est palindrome :</b></font>
+<p>est une figure de style désignant un texte ou un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche, 
+comme dans la phrase « Ésope reste ici et se repose » ou encore « La mariée ira mal » à un accent près.</p>
+<pre>
+<p>Function Verif( Ch : String ) : Boolean ;</p>
+<p> Begin</p>
+<p>		If ( length(ch) = 1 ) then</p>
+<p>		 Verif := True</p>
+<p>		Else </p>
+<p>		If (ch[1] <> ch[length(ch)]) then</p>
+<p>		  Verif := False</p>
+<p>		Else</p>
+<p>		 Begin</p>
+<p>		Delete(ch,1,1);</p>
+<p>		Delete(ch,length(ch),1);</p>
+<p>		Verif := Verif(ch) ;</p>
+<p>		 End;</p>
+<p> End;</p>
+<p><font style="color:red" Size=6><b>Le tour de Hanoy :</b></font>
+<p>Le tour de Hanoy est un jeu qui consistre à déplacer N disques superposés l'un sur l'autre du plus grand au plus petit 
+d'un piquet d départ D vers un piquet d'arriver A par l'intermediaire I.</p>
+<p>Pour déplacer ces disques il faut respecter les règles suivantes:</p>
+<ol>
+<p>- On ne peut pas déplacer qu'un seul disque à la fois.</p>
+<p>- On déplace un disque vers un autre qui est plus grand.</p>
+<p>------ Remarque : Pour déplacer N disques il faut (2^n - 1) déplacements.</p>
+</ol></pre>
+<img style="margin-left:300px;" src='img\gifa.gif'></img>
+<pre>
+<p><font style="color:Grey" size=6>Analyse</font></p>
+<p>
+Programme Principale:
+Resultat = proc Hanoy (n,''D'',''A'',''I'')
+       n = Repeter 
+                n = donnée (''Donner le nombre ds disques'')
+           Jusqu'à (n dans [2..8])
+Fin programme Principale
+
+Def proc Hanoy (n: entier ; d,a,i : caractère)
+Resultat = Si (n>0) alors
+		Proc Hanoy(n-1,D,I,A)
+		ecrire("Déplacer de ",D," vers ",A)
+		Proc Hanoy(n-1,D,A,D)
+           Fin si 	
+Fin proc Hanoy		   
+</p>
+</pre>
+</div>
+
+ 
+ 
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

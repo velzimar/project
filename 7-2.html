@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Problèmes d'optimisation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:170%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Problèmes d'optimisation</marquee></h2>
+</div>
+
+ <!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="7-1.html">Problèmes d'approximations</a>
+                </li>
+                <li>
+                    <a href="7-2.html">Problèmes d'optimisation</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<font style="color:red"><h2>Résolution d’un problème d’optimisation</h2></font>
+<p>Dans une feuille de carton carrée de 10 cm de côté, 
+on découpe aux quatre coins quatre carrés de côté x de telle façon qu’en relevant les quatre bords restants, 
+on obtienne une boîte de forme parallélépipédique. On veut trouver la valeur de x telle que le volume de la boîte ainsi formée soit maximum.</p>
+
+<b><p>1- Déterminez le volume de la boîte  en fonction de x. 
+2- On se propose de chercher la valeur approchée de x tel que le volume de la boîte  est maximum. Le pas de variation de x est une donnée.</p></b>
+
+<p><b>Pour exprimer le volume de la boîte  V en fonction de x, nous pouvons constater que :</b></p>
+<p>• V =surface de base*hauteur. 
+• Surface de base=(10-2*x)*(10-2*x) 
+• Hauteur = x
+D’où  V=(10-2*x)* (10-2*x)*x
+V= 4*x3-40*x2+100*x</p>
+
+<font style="color:red"><h2>Remarques :</h2></font>
+<p>• La détermination du volume de la boîte  en fonction de x a fait apparaître une fonction numérique. </p>
+<p>• L’étude de la variation de cette fonction montre que cette fonction admet un maximum. </p>
+<p>• Le domaine de variation de la valeur de la variable x est de 0 à 5 (d’une façon générale de 0 à la moitié de la mesure du côté du carré). </p>
+<p>• La feuille de carton peut être rectangulaire et dans ce cas x variera de 0 à la moitié de la mesure de la largeur.</p>
+<p>Ce type de problèmes est appelé un problème d’optimisation. La résolution de ce problème consiste à déterminer une valeur approchée de x où la fonction admet un maximum. </p>
+<p>Cette valeur permet de produire une boîte  dont le volume est maximum et par la suite permet d’optimiser ce phénomène et assurer les meilleures conditions de rentabilité, 
+de production, …</p>
+
+<b><p>Pour déterminer la valeur approchée de x on peut utiliser la fonction  suivante :</p></b>
+<p>FN VALEUR_DE_X ( pas : Réel) : Réel
+- pas : représente le pas de variation de X.</p>
+
+<font style="color:red"><h2>Analyse :</h2></font>
+<p>Analysez puis déduisez un algorithme solution à cette fonction.</p>
+<p>Spécification de la fonction Valeur_de_x</p>
+<p>Résultat = x</p>
+ <p>Traitement = - Le domaine de variation de la variable x est de 0 à 5. </p>
+<p>- La solution comporte une structure itérative à condition d’arrêt   Répéter … Jusqu’à … pour couvrir toutes les valeurs de x avec un pas donné. </p>
+<p>- Pour chaque itération, nous allons : </p>
+   <p> - calculer la valeur du volume.</p>
+   <p> - comparer cette valeur à la valeur du volume maximum, si elle est supérieure alors, nous changeons la valeur du volume maximum et nous mémorisons la valeur de x.</p> 
+<p>- la fonction retourne la valeur mémorisée de x. </p>
+<p>- N’oublions pas d’initialiser la valeur de x et celle du volume maximum à 0.</p>
+
+<font style="color:red"><h2>Algorithme :</h2></font>
+<p>0) DEF FN Valeur_de_x (pas : Réel) : Réel 
+1) Xmax ? 0 
+2) Vmax ? 0 
+3) Répéter 
+x ? x+pas 
+V ? 4*x*x*x-40*x*x+100*x 
+Si Vmax  ? V alors 
+Xmax ? x 
+Vmax ? v 
+Fin si 
+Jusqu'à (x = 5) 
+4) Valeur_de_x ? Xmax 
+5) Fin Valeur_de_x </p>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Les types standard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:530%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+<a name="Top"> </a>
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Les types standard</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="1-1.html">Les constantes et les variables</a>
+                </li>
+                <li>
+                    <a href="1-2.html">Les types standard</a>
+                </li>
+                <li>
+                    <a href="1-3.html">Les opérations d'entrée-sortie-affectation</a>
+                </li>
+                <li>
+                    <a href="1-4.html">Les types enumérés</a>
+                </li>
+                <li>
+                    <a href="1-5.html">Les fichiers</a>
+                </li>
+                <li>
+                    <a href="1-6.html">Les types utilisateurs</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+
+<br>
+<font style="color:lightblue"><p align="center"><b>Le type entier </b></p></font>
+ <p>Domaine de définition Sous-ensemble de Z -32768….32767</p>
+<br>
+<font style="color:red">Opérateurs relationnels :</font>
+ <p>Notation algorithmique < , >, = , = , = , ? 
+ <p>Notation en Pascal < , >, = , <= , >= , <></p>
+<br>
+<font style="color:red">Opérateurs arithmétiques :</font>
+ <p> +, - , *, / , DIV , MOD</p>
+<br>
+<font style="color:red">Déclaration en Pascal :</font>
+ <p>Var Nom : integer ; </p>
+<br>
+<font style="color:red">Quelques sous types du type entier :</font>
+ <p>1. Les sous types non signés :
+ <p>- Le type octet ou Byte Le type octet est codé sur un seul octet non signé. Son domaine varie de 0 à 255.
+ <p>- Le type mot ou Word Le type mot est codé sur deux octets non signé. Son domaine varie de 0 à 65535. - Le type mot long ou Longword Le type mot long est codé sur quatre
+octets non signé. Son domaine varie de 0 à 4294967295. 
+ <p>2. Les sous types signés :
+ <p>- Le type entier court ou Shortint Le type entier court  est codé sur un seul octet signé. Son domaine varie de -128 à 127. 
+ <p>- Le type entier ou Integer Le type entier  est codé sur deux octets signés. Son domaine varie de -32768 à 32767. 
+ <p>- Le type entier long ou Longint Le type entier  long est codé sur quatre octets signés. Son domaine varie  de -2147483648 à 2147483647.</p>
+<br>
+<font style="color:lightblue"><p align="center"><b>Le type réel</b></p></font>
+ <p>Domaine de définition Sous-ensemble de IR</p>
+<br>
+<font style="color:red">Opérateurs relationnels :</font>
+ <p>Notation algorithmique <, >, =, =, =, ? 
+ <p>Notation en Pascal <, >, =, <=, >=, <></p>
+<br>
+<font style="color:red">Opérateurs arithmétiques :</font>
+ <p>+, -, *, / </p>
+<br>
+<font style="color:red">Déclaration en Pascal :</font>
+ <p>Var Nom : Real ; </p>
+<br>
+<font style="color:red">Les fonctions arithmétiques standard :</font>
+ <p>Vous avez vu l’année dernière que le langage Pascal comme tout autre langage dispose d’une bibliothèque riche en fonctions arithmétiques dont voici quelques-unes :
+ <p>-	Trunc (x) Trunc (x) Permet d’extraire la partie entière de x. Trunc (5, 2) vaut 5 Trunc (5, 9) vaut 5
+ <p>-	Arrondi (x) ROUND (x) Arrondit une valeur réelle à l’entier le plus proche. ROUND (10.23) vaut 10 ROUND (10 .5) vaut 11 ROUND (10.83) vaut 11.
+ <p>-	ABS (x) ABS (x) Renvoie la valeur absolue de x. ABS (-10) vaut 10.
+ <p>-	Carré (x) SQR (x) Renvoie le carré de x. SQR (6) vaut 36
+ <p>-	Racine Carré (x) SQRT (x).Renvoie la racine carrée de x s’il est positif sinon elle provoque une erreur. SQRT(5) vaut 2.236.
+ <p>-	INT (x) INT (x) Renvoie la partie entière de x INT (10.23) vaut 10.00.
+ <p>-	FRAC (x) FRAC (x) Renvoie la partie décimale de x FRAC (10.23) vaut 0.23.
+ <p>-	Cos (x) Cos (x) Renvoie le cosinus de x (x en radians) COS (PI) vaut -1.00.
+ <p>-	Sin (x) Sin (x) Renvoie le sinus de x (x en radians) SIN (PI) vaut 0.00</p>
+<br>
+<font style="color:red">Quelques sous types du type réel :</font>
+ <p>-	Le type simple ou Single Le type single est codé sur quatre octets. Son domaine varie de 1.5 x 10-45 à 3.4 x 1038. Ce type comporte de 7 à 8 chiffres significatifs.
+ <p>-	Le type double ou Double Le type double est codé sur huit octets. Son domaine varie de 5.0 x 10-324 à 1.7 x 10308. Ce type comporte de 15 à 16 chiffres significatifs.
+ <p>-	Le type étendu ou Extended Le type extended est codé sur dix octets. Son domaine varie de 3.6 x 10-4951 à 1.1 x 104932. Ce type comporte de 19 à 20 chiffres significatifs. </p>
+<br>
+<font style="color:lightblue"><p align=center><b>Le type booléen</b></p></font>
+ <p>Le type booléen est très souvent négligé par les programmeurs, à tort. Il est vrai qu'il n'est pas à proprement parler indispensable et qu'on pourrait écrire à peu près n’importe 
+quel programme en l'ignorant complètement. Pourtant, si le type booléen est mis à disposition des programmeurs dans tous les langages, ce n'est pas pour rien. 
+ <p>Le recours aux variables booléennes s'avère très souvent un puissant instrument de lisibilité des algorithmes : 
+ <p>il peut faciliter la tâche de celui qui écrit l'algorithme, comme de celui qui le relie pour le corriger.
+ <p>Une donnée ou une variable de type booléen ne peut prendre que deux valeurs représentées par les identificateurs VRAI (TRUE) ou FAUX (FALSE). 
+ <p>On obtient un résultat de type booléen quand on est amené à comparer des expressions entre elles, au moyen des opérateurs de comparaison, tel que : <, >, =, =, =, NON, ET, OU, etc.</p>
+<br>
+<font style="color:red">Exemple :</font>
+ <p>-	Le résultat de 14 > 5 est VRAI celui de 14 < 5 est FAUX et celui de 5 = 9 est FAUX
+ <p>-	Le résultat de (14 > 5) ET (5 < 3) est FAUX car (14 > 5) est VRAI et (5 < 3) est FAUX</p>
+<br>
+<font style="color:red">Notation algorithmique Notation en Pascal :</font>
+ <p>Non (Négation) Et (Conjonction) Ou (Disjonction) Ouex (Ou exclusif)
+ <p>NOT AND OR XOR</p>
+<br>
+<font style="color:red">Déclaration en Pascal :</font>
+ <p>Var Nom : Boolean ; </p>
+<br>
+<font style="color:lightblue"><p align=center><b>Le type caractère</b></p></font>
+<br>
+<font style="color:red">Les codes ASCII des exemples de caractères :</font>
+ <p>-	Chiffres de 0 à 9 de 48 à 57.
+ <p>-	Lettres de A à Z de 65 à 90.
+ <p>-	Lettres de a à z de 97 à 122.
+ <p>-	Le retour chariot 13.
+ <p>-	La barre d’espace 32</p>
+<br>
+<font style="color:red">Fonctions prédéfinies relatives au type caractère :</font>
+ <p>-	ORD (c) ORD (c) Renvoie le code ASCII du caractère c.
+ <p>-	ORD (‘’A’’) vaut 65.
+ <p>-	CHR (n) CHR (n) Renvoie le caractère dont le code ASCII est n.
+ <p>-	CHR (65) vaut ‘’A’’.
+ <p>-	PRED (c)   PRED (c)   Renvoie le prédécesseur de c. PRED (‘’B’’) vaut ‘’A’’
+ <p>-	SUCC (c) SUCC (c) Renvoie le successeur de c. SUCC (‘’A’’) vaut ‘’B’’.
+ <p>-	MAJUS (c) UPCASE (c) Convertit le caractère c en majuscule si c’est possible. UPCASE (‘’a’’) vaut ‘’A’’</p>
+<br>
+<font style="color:red">Opérateurs Relationnels :</font>
+ <p>< , >, = , = , = , ? </p>
+<br>
+<font style="color:red">Déclaration en Pascal :</font>
+ <p>Var Nom : CHAR ; </p>
+<br>
+<font style="color:lightblue"><p align=center><b>Le type chaine de caractères</p></b></font> 
+<br>
+<font style="color:red">Les Fonctions et les procédures prédéfinies sur les chaînes :</font>
+
+ <p>-	Long (ch) Length (ch).Renvoie le nombre de caractères de ch. Length(‘technologie’) vaut 12
+ <p>-	Position (ch2, ch2) pos (ch2, ch2).Renvoie la position de la 1ère occurrence de ch2 dans ch2. si ch2 n’est pas dans ch2 elle retourne la valeur 0.Pos (‘’i’’,‘’Informatique‘’) 
+vaut  9 Pos (‘’I’’, ‘’Informatique’’) vaut 1. Pos (‘’Formation’’, ‘’Informatique’’) vaut 0
+ <p>-	Concat (ch2,ch2…chn) Concat (ch2,ch2…chn).permet la concaténation de ch2, ch2,… et chn Soit ch2 := ‘Ecole’ ; ch2 :=’Sup’ ; L’instruction Concat (ch2,’ ‘,ch2) renvoie la chaîne
+ ‘Ecole Sup’.
+ <p>-	Efface (ch,p,n) Delete (ch,p,n).Enlève n caractères de la chaîne ch à partir de la position p. Le résultat se trouvera dans la chaîne ch.Delete(‘’Turbo Pascal’’,6,7) vaut
+ ‘'Turbo’’
+ <p>-	Convch  (n, ch) Str (n, ch).Convertit le nombre n en une chaîne chn :=20; Après exécution de l’instruction STR(n,ch) la chaîne ch va contenir “20”
+ <p>-	Valeur (ch,n,e) Val (ch,n,e)Convertit la chaîne ch en un nombre n.ch := “20”; Après exécution de l’instruction VAL(ch,n,e) n va contenir 20 et e sera égale à 0 (pas d’erreur)
+ <p>-	Insère (ch2,ch2,p)Insert (ch2,ch2,p).Insère la chaîne ch2 dans la chaîne ch2 à la position p. Ch2 :=’mation’ ; Ch2 :=’program’ ; Après exécution de l’instruction Insert 
+(ch2,ch2,8) la chaîne ch2 va contenir “programmation”
+ <p>-	Sous_chaîne (ch,p,n) Copy (ch,p,n)Renvoie une sous -chaîne de n caractères à partir de la position p de ch. .Copy (‘’informatique’’,3,6) vaut ‘’format’’.</p>
+<br>
+<font style="color:red">Déclaration en Pascal :</font>
+ <p>Var Nom : String</p>
+<br>
+
+<p><a href=#Top>Top</a>
+</div>
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

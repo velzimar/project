@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Recherche d'un élément dans un tableau</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:130%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Recherche d'un élément dans un tableau</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="4-1.html">Recherche d'un élément dans un tableau</a>
+                </li>
+                <li>
+                    <a href="4-2.html">Tri d'un tableau</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<pre>
+<font style="color:lightblue"><p align="center"><b>Le recherche sequencielle </b></p></font><br>
+<font style="color:red">Traduction en Pascal :</font>
+<p>Function Rech_Seq( t : tab ; x,n : integer ): boolean ;
+var i : integer ;
+    b : boolean ;
+begin
+ i := 0 ;
+ b := false ;
+ repeat
+  i := i + 1 ;
+  if t[i] = x then
+   b := true ;
+ until (b) or ( i=n );
+Rech_Seq := b ;
+end;</p>
+<br>
+<font style="color:lightblue"><p align="center"><b>Le recherche Dichotomique </b></p></font><br>
+<font style="color:red">Définition :</font>
+<p>Le tableau doit etre trié.
+On regarde l'élément au milieu du tableau. S'il est égale à la valeur cherchée, donc c'est terminé. S'il est inférieure à la valeur cherchée, 
+alors il ne reste à traité que la moitié droite du tableau. S'il est supèrieure à la valeur cherchée, alors il ne reste à traité que la moitié gauche du tableau.
+=> On continue la recherche en diminuant à chaque fois de moitié le nombre du tableau restant à traiter.</p></p>
+<font style="color:red">Traduction en Pascal :</font>
+<p>Function Rech_Dich( t : tab ; x,n : integer ): boolean ;
+var d,f,i,m : integer ;
+    b : boolean ;
+begin
+ f := n ;
+ d := 1 ;
+ b := false ;
+ repeat
+  m := (d+f) div 2 ;
+  if ( t[m]= x ) then
+   b := true
+  else if (t[m] < n ) then
+   d := m + 1 
+  else
+   f := m - 1 ;
+ Until (d > f ) or (b) ;
+ Rech_Dich := b ;
+end;</p>
+<br>
+</pre>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

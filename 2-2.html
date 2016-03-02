@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Les structures itératives</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:380%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+<a name="Top"> </a>
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Les structures iteratives</marquee></h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="2-1.html">Les structures conditionelles</a>
+                </li>
+                <li>
+                    <a href="2-2.html">Les structures iterative</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<font style="color:lightblue"><p align="center"><b>For ... : = ... To ... Do ...</b></p></font>
+<p>Cette instruction permet d'incrémenter une variable à partir d'une valeur inférieur jusqu'à une valeur supérieur et d'exécuter une ou des instructions entre chaque incrémentation.
+<p>Les valeurs extrémum doivent être des entiers (integer) ou des caractères de la table ASCII (char). De manière plus générale, les bornes doivent être de type intervalle 
+c'est-à-dire qu'ils doivent êtres de type entier ou compatibles avec un type entier. La boucle n'exécute les instructions de son bloc interne que si la valeur inférieur est 
+effectivement inférieur ou égale à celle de la borne supérieur. Le pas de variation est l'unité et ne peut pas être changé. </p>
+
+<font style="color:red">Syntaxe :</font>
+<p>For variable := borne inférieur To borne supérieur Do
+<p>bloc instructions ;</p>
+
+<font style="color:red">Exemple :</font>
+<p>Program exempleFor ; 
+<p>Var i : integer ;
+<p>BEGIN 
+<p>For i := 10 To 20 Do writeln ('Valeur de i : ', i ) ;
+<p>END.</p>
+
+<font style="color:lightblue"><p align="center"><b>For ... : = ... downTo ... Do ...</b></p></font>
+<p>Cette instruction permet de décrémenter une variable à partir d'une valeur supérieur jusqu'à une valeur inférieur et d'exécuter une ou des instructions entre chaque décrémentation.
+<p>S'appliquent ici les mêmes remarques que précédement. </p>
+
+<font style="color:red">Syntaxe :</font>
+<p>For variable := borne supérieur DownTo borne inférieur Do
+<p>bloc instruction ;</p>
+
+<font style="color:lightblue"><p align="center"><b>Repeat ... Until ...</b></p></font>
+<p>Cette strcuture effectue les instructions placées entre repeat et until et évalue à chaque répétition une condition de type booléenne pour décider l'arrêt ou la continuité de la répétition. Il y a donc au moins une fois exécution des instructions. Il est nécessaire qu'au moins une variable intervenant lors de l'évaluation de fin de boucle soit sujet à modification à l'intérieur de la structure exécutive interne à la boucle. 
+
+<font style="color:red">Syntaxe :</font>
+<p>Repeat
+<p>...
+<p>commandes
+<p>...
+<p>Until expression booléenne;
+
+<font style="color:red">Exemple :</font>
+
+<p>Program exemple_Repeat;
+<p>Uses crt ;
+<p>var c: char
+<p>BEGIN
+<p>   writeln('Appuyer sur ESPACE pour terminer');
+<p>   Repeat
+<p>      c := readkey;
+<p>   Until c=' ';
+<p>END.</p>
+
+<font style="color:lightblue"><p align="center"><b>While ... Do ...</b></p></font>
+<p>Contrairement à la précédente, cette structure évalue une condition avant d'exécuter des instructions, c'est-à-dire qu'on peut ne pas entrer dans la structure de répétition si les conditions ne sont pas favorables. De plus, au moins une variable de l'expression d'évaluation doit être sujette à modification au sein de la structure de répétition pour qu'on puisse en sortir.</p>
+
+<font style="color:red">Syntaxe :</font>
+<p>While expression booléenne Do 
+<p>   bloc instructions ;</p>
+
+<font style="color:red">Exemple :</font>
+<p>Program palindrome ;
+<p>{un palindrome est un mot qui est identique si on le lit de gauche à droite ou de droite à gauche. Kayak est un palindrome}
+<p>Var mot : string ;
+<p>    i1,i2:integer
+<p>BEGIN
+<p>  Write('Entrer un mot :');readln(mot);
+<p>  i1=1; i2=length(mot);
+<p>  while (i1<¿i2) and (mot[i1]=mot[i2]) do
+<p>    begin
+<p>      i1:=i1+1;
+<p>      i2:=i2-1;
+<p>   end;
+<p>  if mot[i1]=mot[i2]
+<p>     then writeln(mot,' est un palidrome')
+<p>    then writeln(mot,' n'est pas un palidrome')
+<p>END.</p>
+<br>
+<br>
+<br>
+<p><a href=#Top>Top</a>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

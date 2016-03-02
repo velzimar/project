@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Calcul du factorielle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#nav {
+    height:86%;
+}
+#section pre{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2  id="menu-toggle"><marquee>Calcul du factorielle</marquee></h2>
+</div>
+
+ <!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="6-1.html">Calcul du factorielle</a>
+                </li>
+                <li>
+                    <a href="6-2.html">Calcul du PGCD et du PPCM</a>
+                </li>
+                <li>
+                    <a href="6-3.html">La conversion entre bases de numeration</a>
+                </li>
+                <li>
+                    <a href="6-4.html">La décomposition en facteurs premiers</a>
+                </li>
+                <li>
+                    <a href="6-5.html">Les nombres premiers</a>
+                </li>
+                <li>
+                    <a href="3eme.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<font style="color:red"><h2>Exemple:</h2></font>
+	<pre>
+Le tableau de droite donne les premières factorielles ; par exemple, on a
+1! = 1
+2! = 1 × 2 = 2
+3! = 1 × 2 × 3 = 6
+4! = 1 × 2 × 3 × 4 = 24
+10! = 1 × 2 × 3 × 4 × 5 × 6 × 7 × 8 × 9 × 10 = 3 628 800
+On utilise la formule suivante: n! = 1*2*3*4*5*6*.....*n
+	</pre>
+<font style="color:red"><h2>Algorithme:</h2></font>
+<pre>
+0)Def fn Fact_Iterative (n:integer): extented	   
+1)f := 1
+	Pour i de 1 à n faire
+		f := f * i 
+	Fin Pour	
+2)Fact := f 
+3)Fin fn Fact_Iterative
+</pre>
+</div>
+
+ 
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

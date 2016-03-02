@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Aide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+<div id="header" class="top">
+<h2 id="menu-toggle" class="animated bounceInRight">Aide</h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                
+                </li>
+                <li>
+                    <a href="index.php">Accueil</a>
+                </li>
+                <li>
+                    <a href="courspascal.html">Cours Pascal</a>
+                </li>
+                <li>
+                    <a href="exercicepascal.html">Exercices Pascal</a>
+                </li>
+                <li>
+                    <a href="js.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href="Php.html">Php</a>
+                </li>
+                <li>
+                    <a href="3eme.html">3eme Année</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<b>Mot de passe pour les solutions des exercices:</b><font id="mdp" color="blue"><a onclick="document.getElementById('mdp').innerHTML ='123456'">" ****** "</a></font>
+<p><b>Téléchargements:</b>
+<p><a href="ftp://ftp-developpez.com/pascal/turbo-pascal/tpw15-fr.zip">Turbo Pascal</a></p>
+<p><a href="http://notepad-plus-plus.org/repository/6.x/6.8.3/npp.6.8.3.Installer.exe">Notepad++</a></p>
+<p><a href="http://tinyurl.com/o4qsz5x">EasyPhP</a></p>
+</div>
+
+<br><br><br><br><br>
+<div>
+	
+<center>
+	<font style='font-size:1.3vw'>
+<FORM method='get' action='' name='f'>
+<TABLE BORDER="0" >
+<TR>
+	<TD>Nom & Prénom</TD>
+	<TD colspan=2>
+	<INPUT type=text name="np">
+	</TD>
+</TR>
+
+<TR>
+	<TD>Adresse electronique</TD>
+	<TD colspan=2>
+	<INPUT type=text name="email" >
+	</TD>
+</TR>
+
+<TR>
+	<TD>Sujet</TD>
+	<TD colspan=2>
+	<INPUT type=text name="sujet" >
+	</TD>
+</TR>
+
+<TR>
+	<TD>Message</TD>
+	<TD colspan=2>
+	<TEXTAREA rows="3" cols="18" name="msg" value="Taper Votre message" ></TEXTAREA>
+	</TD>
+</TR>
+
+<TR>
+    <TD></TD>
+	<TD>
+	<INPUT type="button" value="Envoyer" onclick='test()'>
+	</TD>
+	<TD align=right>
+	<INPUT type="submit" value="Annuler">
+	</TD>
+</TABLE>
+</font>
+</FORM>
+</center>
+</div>
+
+
+<script>
+function test() 
+{
+if ((document.f.np.value == "") || (!(isNaN(document.f.np.value))))
+	{
+		alert("Votre Nom & Prénom est incorrect");
+		document.f.np.style.borderColor = "red";
+		document.f.np.focus();
+		return;
+	}
+
+a = document.f.email.value.indexOf('@');
+p = document.f.email.value.lastIndexOf('.');
+if ((document.f.email.value == "") || (p  == -1) || (a == -1) || (p<a))
+	{
+		alert("Votre E-mail est incorrect");
+		document.f.email.style.borderColor = "red";
+		return;
+	}
+	
+if (document.f.msg.value == "")
+	{
+		alert("Saisir votre message");
+		document.f.msg.style.borderColor = "red";
+		document.f.msg.focus();
+		return;
+	}	
+	
+}
+</script>
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html><html>
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>BAC Info | JS Cours</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script src="js/soluex.js"></script>
+  
+  
+<style>
+body {
+  background-color: #eee;
+}
+.navbar-default {
+  background-color: #f0db4f;
+  border-color: #e2cd3e;
+  }
+</style>
+</head>
+
+<body>
+<!--Begin nav -->
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.Php">Acceuil</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="js.html">Intro</a></li>
+						<li class="active dropdown">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours JavaScript
+						  <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#if">If..Else statement</a></li>
+							<li><a href="#do">Do..while statement</a></li>
+							<li><a href="#while">While..Do statement</a></li> 
+              <li><a href="#for">For.. statement</a></li> 
+						  </ul>
+						</li>
+        <li><a href="jsex.html">Exercices JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End nav -->
+
+	<div class="container">
+		<div class="well">
+
+        <!--Begin Template-->				
+<center><h2> <a name="if">if...else</a></h2></center>
+<pre><h3 style="color:purple">Exécute une série de déclarations si une condition spécifiée est vraie. Si la condition est fausse, une autre série de déclarations peut être exécutée.</h3>
+<h4><b>Syntaxe:</b></h4>
+if (condition) {
+statements1
+}
+else {
+statements2
+}
+
+<h4><b>Paramètres:</b></h4>
+Condition peut être toute expression JavaScript qui renvoie true ou false. Les parenthèses sont nécessaires autour de la condition. Si la condition est évaluée à true, les déclarations contenues dans "statements1" sont exécutées. 
+statements1, statements2 peut être tout instructions JavaScript, y compris de nouvelles instructions IF imbriquées. Plusieurs déclarations doivent être placées entre accolades.
+<h4><b>Example:</b></h4>
+if (char == char2) {
+result = 1;
+}
+else{
+result = 0;
+}
+
+</pre>
+        <!--End Template-->
+
+        <!--Begin Template-->				
+<center><h2> <a name="do">do..while</a></h2></center>
+<pre><h3 style="color:purple">Exécute les instructions spécifiées jusqu'à ce que la condition de test est évaluée à false. Déclarations exécuter au moins une fois.</h3>
+<h4><b>Syntaxe:</b></h4>
+do
+statements
+while (condition);
+<h4><b>Paramètres:</b></h4>
+Évalué après chaque passage dans la boucle. Si la condition est évaluée à true, les instructions dans le bloc précédent sont réexécuté. Lorsque la condition est évaluée à false, le contrôle passe à l'instruction suivante faire tout.
+<h4><b>Example:</b></h4>
+Dans l'exemple suivant, la boucle se faire au moins une fois et réitère que i ne soit plus inférieur à 5. 
+
+do {
+i+=1;
+document.write(i);
+} while (i<5);
+
+</pre>
+        <!--End Template-->
+
+        <!--Begin Template-->				
+<center><h2> <a name="while">while..do</a></h2></center>
+<pre><h3 style="color:purple">Crée une boucle qui évalue une expression, et si il est vrai, exécute un bloc de déclarations. La boucle se répète alors, tant que la condition spécifiée est vraie.</h3>
+<h4><b>Syntaxe:</b></h4>
+while (condition) {
+statements
+}
+<h4><b>Paramètres:</b></h4>
+Évalués avant chaque passage dans la boucle. Si cette condition est évaluée à true, les déclarations contenues dans le bloc suivant sont exécutés. Lorsque la condition est évaluée à false, l'exécution se poursuit avec la déclaration suivante déclarations.
+<h4><b>Example:</b></h4>
+Dans l'exemple suivant, la boucle est executée tant que n est inférieur à trois. 
+
+n = 0;
+x = 0;
+while(n < 3) {
+n ++;
+x += n;
+}
+</pre>
+        <!--End Template-->
+
+        <!--Begin Template-->       
+<center><h2> <a name="for">for..</a></h2></center>
+<pre><h3 style="color:purple">Crée une boucle qui est constituée de trois expressions, en option entre parenthèses et séparés par des virgules, suivi d'un bloc d'instructions exécutées dans la boucle.</h3>
+<h4><b>Syntaxe:</b></h4>
+for ([initial-expression]; [condition]; [increment-expression]) {
+statements
+}
+<h4><b>Paramètres:</b></h4>
+initial-expression: Déclaration ou déclaration de variable. Généralement utilisé pour initialiser une variable compteur. Cette expression peut éventuellement déclarer de nouvelles variables avec le mot-clé var. Ces variables sont locales à la fonction, et non pas à la boucle. 
+condition: évalué à chaque passage dans la boucle. Si thiscondition true, les déclarations en déclarations sont effectuées. Ce test conditionnel est facultative. Si omis, la condition est toujours vraie. 
+increment-expression: Généralement utilisé pour mettre à jour ou incrémenter le compteur variable.
+<h4><b>Example:</b></h4>
+La déclaration suivante pour départs en déclarant la variable i et l'initialiser à 0. Il vérifie que i est inférieur à neuf, effectue les deux déclarations suivantes, et incrémente i de 1 après chaque passage dans la boucle. 
+
+for (var i = 0; i < 9; i++) {
+n += i;
+myfunc(n);
+}
+</pre>
+        <!--End Template-->
+
+        <!--Begin Template     
+<center><h2> <a name="for">DUNNO..</a></h2></center>
+<pre><h3 style="color:purple">'description'</h3>
+<h4><b>Syntaxe:</b></h4>
+
+
+<h4><b>Paramètres:</b></h4>
+
+<h4><b>Example:</b></h4>
+
+</pre>
+        End Template-->
+
+
+		</div>
+	</div>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+
+</html>

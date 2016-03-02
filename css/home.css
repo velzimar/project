@@ -1,0 +1,156 @@
+body{
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
+#bg{
+    width:100%;
+	height:auto;
+	z-index:-100;
+	position:fixed;
+	left:0px;
+	top:0px;
+	min-height:100%;
+	min-width:640px;
+}
+
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+@font-face{
+    font-family:VCR_OSD_MONO;
+	src:url("font/VCR_OSD_MONO.ttf");
+}
+
+a  {
+	font-size:2.5vmin;
+}
+
+
+
+#nav{
+    margin:1%;
+}
+#nav a {
+    display:inline;
+	margin:1px;
+	text-decoration: none;
+	font-size:100%;
+	color:#e7e7e7;
+	font-family:VCR_OSD_MONO;
+	float:center;
+}
+#nav a:hover {
+    background-color: #65C3E0;
+	color:black;
+	padding: 1px; 
+	border-radius: 0 0 0 0;
+}
+#nav a:active {
+    color: orange;
+}
+
+#BacInformatique p {
+    margin:15%;
+    font-family:Brush Script MT;
+    color:#C06969;
+	font-size:20vmin;
+	/*font-size:140px;*/
+	text-align:center;
+	/*white-space: nowrap;*/
+}
+#tun p {
+    margin-top:-17.7%;
+    font-family:Brush Script MT;
+    color:#C06969;
+	font-size:2.8vmin;
+	/*font-size:20px;*/
+	text-align:center;
+	float:right;
+	width:66.4% ;
+}
+
+
+/*@media screen and (max-width:1200px) {
+    #bg{
+	   width:100%;
+	   height:auto;
+	   z-index:-100;
+	   position:fixed;
+	   left:0px;
+	   top:0px;
+	   min-height:100%;	
+	}
+    #nav a {
+	   margin:1px;
+       font-size:115%;
+    }  
+	#BacInformatique p {
+       margin:7%;
+	   font-size:240px;
+
+    }
+}
+
+
+@media screen and (max-width:960px) {
+    #bg{
+	   width:100%;
+	   height:auto;
+	   z-index:-100;
+	   position:fixed;
+	   left:0px;
+	   top:0px;
+	   min-height:100%;	
+	}
+    #nav a {
+	   margin:1px;
+       font-size:100%;
+    }  
+	#BacInformatique p {
+       margin:10%;
+	   font-size:200px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #bg{
+	   width:100%;
+	   height:auto;
+	   z-index:-100;
+	   position:fixed;
+	   left:0px;
+	   top:0px;
+	   min-height:100%;	
+	}
+    #nav a {
+	   margin:1px;
+       font-size:100%;
+    }  
+	#BacInformatique  p {
+       margin:10%;
+	   font-size:160px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    #bg{
+	   width:100%;
+	   height:auto;
+	   z-index:-100;
+	   position:fixed;
+	   left:0px;
+	   top:0px;
+	   min-height:100%;
+	}
+    #nav a {
+	   margin:1px;
+       font-size:75%;
+    }  
+	#BacInformatique  p {
+       margin:10%;
+	   font-size:130px;
+    }
+}*/
